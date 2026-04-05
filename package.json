@@ -19,6 +19,7 @@
     "build": "tsc -p tsconfig.json",
     "clean": "rm -rf dist",
     "check": "npm run build",
+    "prepare": "npm run build",
     "sync:dataset-only": "bash scripts/sync-from-dataset-only.sh"
   },
   "devDependencies": {
