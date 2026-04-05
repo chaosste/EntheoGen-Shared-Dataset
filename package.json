@@ -1,0 +1,27 @@
+{
+  "name": "@entheogen/shared-dataset",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "files": [
+    "dist",
+    "data",
+    "README.md",
+    "COINTEGRATED_INSTRUCTIONS.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist",
+    "check": "npm run build",
+    "sync:dataset-only": "bash scripts/sync-from-dataset-only.sh"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  }
+}
